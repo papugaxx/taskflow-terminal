@@ -2,10 +2,6 @@
 
 A premium local-first task manager built with **React**, **TypeScript**, **Vite** and **Ant Design**. It is designed as a portfolio-ready productivity app with a deep black / chrome liquid-glass interface, task intelligence, priorities, due dates, analytics, import/export and Docker support.
 
-![TaskFlow Terminal preview](docs/screenshots/main.svg)
-
-> Replace `docs/screenshots/main.svg` with real screenshots after you run the app locally or deploy it.
-
 ## Features
 
 - Create, edit, complete, restore and archive tasks.
