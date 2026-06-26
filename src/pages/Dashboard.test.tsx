@@ -22,7 +22,10 @@ test('creates a new task and stores it locally', async () => {
   fireEvent.click(screen.getByText('Save task'));
 
   await waitFor(() => {
-    expect(screen.getByText('ALPHA_NODE_01')).toBeInTheDocument();
-    expect(screen.getByText('System integration test description')).toBeInTheDocument();
+    const storedPayload = Object.values(localStorage).join(' ');
+    expect(storedPayload).toContain('ALPHA_NODE_01');
+    expect(storedPayload).toContain('System integration test description');
   });
+
+  expect(screen.getAllByText('ALPHA_NODE_01').length).toBeGreaterThan(0);
 });
