@@ -12,10 +12,10 @@ test('creates a new task and stores it locally', async () => {
 
   fireEvent.click(screen.getByText('New task'));
 
-  fireEvent.change(await screen.findByPlaceholderText('e.g. Refactor dashboard state'), {
+  fireEvent.change(await screen.findByPlaceholderText('e.g. Launch landing page'), {
     target: { value: 'ALPHA_NODE_01' },
   });
-  fireEvent.change(screen.getByPlaceholderText('Add useful context, acceptance criteria or next steps...'), {
+  fireEvent.change(screen.getByPlaceholderText('Add context, acceptance criteria or next steps...'), {
     target: { value: 'System integration test description' },
   });
 
