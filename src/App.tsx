@@ -84,7 +84,7 @@ export default function App() {
           {currentPage === 'settings' ? (
             <Settings settings={settings} onSave={handleSaveSettings} />
           ) : (
-            <Dashboard settings={settings} defaultTab={currentPage === 'analytics' ? 'analytics' : 'active'} />
+            <Dashboard key={currentPage} settings={settings} defaultTab={currentPage === 'analytics' ? 'analytics' : 'active'} />
           )}
         </Content>
       </Layout>

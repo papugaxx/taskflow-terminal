@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import dayjs from 'dayjs';
 import {
   Alert,
@@ -52,7 +52,7 @@ const priorityLabels: TaskPriority[] = ['urgent', 'high', 'medium', 'low'];
 const formatHours = (minutes: number) => `${Math.round((minutes / 60) * 10) / 10}h`;
 
 export const Dashboard = ({ settings, defaultTab = 'active' }: Props) => {
-  const [tasks, setTasks] = useState<Task[]>([]);
+  const [tasks, setTasks] = useState<Task[]>(() => loadTasks());
   const [searchText, setSearchText] = useState('');
   const [priorityFilter, setPriorityFilter] = useState<TaskPriority | 'all'>('all');
   const [projectFilter, setProjectFilter] = useState<string>('all');
@@ -61,14 +61,6 @@ export const Dashboard = ({ settings, defaultTab = 'active' }: Props) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [editingTask, setEditingTask] = useState<Task | null>(null);
   const [selectedTask, setSelectedTask] = useState<Task | null>(null);
-
-  useEffect(() => {
-    setTasks(loadTasks());
-  }, []);
-
-  useEffect(() => {
-    setActiveTab(defaultTab === 'analytics' ? 'analytics' : defaultTab);
-  }, [defaultTab]);
 
   const persistTasks = (nextTasks: Task[]) => {
     setTasks(nextTasks);
