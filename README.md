@@ -2,13 +2,25 @@
 
 A premium local-first task manager built with **React**, **TypeScript**, **Vite** and **Ant Design**. It is designed as a portfolio-ready productivity app with a deep black / chrome liquid-glass interface, task intelligence, priorities, due dates, analytics, import/export and Docker support.
 
+## Screenshots
+
+### Board
+
 <img width="1241" height="916" alt="Снимок экрана 2026-06-27 021108" src="https://github.com/user-attachments/assets/529dca9d-62de-4f73-9d45-1b23f132c54e" />
+
+### Planner
 
 <img width="1238" height="440" alt="Снимок экрана 2026-06-27 021135" src="https://github.com/user-attachments/assets/ab10bf56-efc7-41f3-8db9-70528af7206e" />
 
+### Insights
+
 <img width="1243" height="606" alt="Снимок экрана 2026-06-27 021141" src="https://github.com/user-attachments/assets/da289b6f-22e5-4b4e-b505-a5c49bd78e94" />
 
+### Settings
+
 <img width="1250" height="669" alt="Снимок экрана 2026-06-27 021221" src="https://github.com/user-attachments/assets/f07e3504-9f07-4b54-b927-d53a65a2fc66" />
+
+### Details Modal
 
 <img width="648" height="565" alt="Снимок экрана 2026-06-27 021205" src="https://github.com/user-attachments/assets/e3f2f30e-0b81-4cba-9f0b-60ee67e2d3e9" />
 
