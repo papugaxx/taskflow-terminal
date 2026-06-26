@@ -2,7 +2,13 @@
 
 A premium local-first task manager built with **React**, **TypeScript**, **Vite** and **Ant Design**. It is designed as a portfolio-ready productivity app with a deep black / chrome liquid-glass interface, task intelligence, priorities, due dates, analytics, import/export and Docker support.
 
-[Live Demo](https://papugaxx.github.io/taskflow-terminal/)
+<p>
+  <a href="https://papugaxx.github.io/taskflow-terminal/">Live Demo</a>
+  ·
+  <a href="#features">Features</a>
+  ·
+  <a href="#getting-started">Getting Started</a>
+</p>
 
 ## Screenshots
 
