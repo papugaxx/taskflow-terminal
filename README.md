@@ -6,8 +6,6 @@
 ![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-222?logo=github)
 A premium local-first task manager built with **React**, **TypeScript**, **Vite** and **Ant Design**. It is designed as a portfolio-ready productivity app with a deep black / chrome liquid-glass interface, task intelligence, priorities, due dates, analytics, import/export and Docker support.
 
-![TaskFlow Terminal preview](docs/screenshots/main.svg)
-
 <img width="610" height="500" alt="Снимок экрана 2026-06-27 021159" src="https://github.com/user-attachments/assets/0b2c31d6-3eba-4cbb-80ce-460dea51cd85" />
 <img width="1238" height="440" alt="Снимок экрана 2026-06-27 021135" src="https://github.com/user-attachments/assets/ee96143e-1b0d-4310-a89c-ab4c48c28102" />
 <img width="1250" height="669" alt="Снимок экрана 2026-06-27 021221" src="https://github.com/user-attachments/assets/d3cba3ab-86c4-4b13-945e-b01ed5166b79" />
