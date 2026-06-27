@@ -1,10 +1,19 @@
 # TaskFlow Terminal
-
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-7-646CFF?logo=vite&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-white)
+![GitHub Pages](https://img.shields.io/badge/Deploy-GitHub%20Pages-222?logo=github)
 A premium local-first task manager built with **React**, **TypeScript**, **Vite** and **Ant Design**. It is designed as a portfolio-ready productivity app with a deep black / chrome liquid-glass interface, task intelligence, priorities, due dates, analytics, import/export and Docker support.
 
 ![TaskFlow Terminal preview](docs/screenshots/main.svg)
 
-> Replace `docs/screenshots/main.svg` with real screenshots after you run the app locally or deploy it.
+<img width="610" height="500" alt="Снимок экрана 2026-06-27 021159" src="https://github.com/user-attachments/assets/0b2c31d6-3eba-4cbb-80ce-460dea51cd85" />
+<img width="1238" height="440" alt="Снимок экрана 2026-06-27 021135" src="https://github.com/user-attachments/assets/ee96143e-1b0d-4310-a89c-ab4c48c28102" />
+<img width="1250" height="669" alt="Снимок экрана 2026-06-27 021221" src="https://github.com/user-attachments/assets/d3cba3ab-86c4-4b13-945e-b01ed5166b79" />
+<img width="1243" height="606" alt="Снимок экрана 2026-06-27 021141" src="https://github.com/user-attachments/assets/9405a89a-28a9-49ab-8a9a-d20e72b35019" />
+<img width="1241" height="916" alt="Снимок экрана 2026-06-27 021108" src="https://github.com/user-attachments/assets/9a554b31-a868-4e29-935b-9ab8be9e9235" />
+
 
 ## Features
 
