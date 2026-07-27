@@ -1,0 +1,115 @@
+.settings-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(360px, 0.72fr);
+  gap: 18px;
+  align-items: stretch;
+}
+.settings-card {
+  padding: 10px;
+}
+.settings-grid-two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+.settings-number.ant-input-number-group-wrapper,
+.settings-number {
+  width: min(230px, 100%) !important;
+}
+.settings-number .ant-input-number-wrapper {
+  display: inline-flex !important;
+  width: 100% !important;
+  overflow: hidden;
+  border-radius: 14px !important;
+}
+.settings-number .ant-input-number {
+  flex: 1 1 auto !important;
+  width: 100% !important;
+  border-start-end-radius: 0 !important;
+  border-end-end-radius: 0 !important;
+}
+.settings-number .ant-input-number-group-addon {
+  width: 48px !important;
+  min-width: 48px !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  padding: 0 !important;
+  color: var(--ink) !important;
+  background: rgba(216, 221, 230, 0.1) !important;
+  border-start-end-radius: 14px !important;
+  border-end-end-radius: 14px !important;
+}
+.settings-switch-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.product-switches .ant-form-item {
+  padding: 15px;
+  border: 1px solid rgba(226, 232, 240, 0.09);
+  border-radius: 20px;
+  background: rgba(226, 232, 240, 0.04);
+}
+.settings-value-card {
+  min-height: 100%;
+}
+.value-list {
+  display: grid;
+  gap: 14px;
+  margin-top: 22px;
+}
+.value-list div {
+  padding: 16px;
+  border-radius: 20px;
+  border: 1px solid rgba(226, 232, 240, 0.09);
+  background: rgba(226, 232, 240, 0.04);
+}
+.value-list b {
+  display: block;
+  margin-bottom: 6px;
+}
+.value-list span {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.task-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.task-detail-hero {
+  padding: 24px;
+}
+.ant-modal-content {
+  background: rgba(5, 6, 8, 0.97) !important;
+  border: 1px solid var(--line);
+  border-radius: 28px !important;
+}
+.ant-input,
+.ant-select-selector,
+.ant-input-number,
+.ant-picker,
+.ant-input-number-group-addon {
+  border-color: rgba(226, 232, 240, 0.12) !important;
+  background: rgba(0, 0, 0, 0.25) !important;
+}
+.ant-btn {
+  box-shadow: none;
+  transition: transform 0.18s ease;
+}
+.ant-btn-primary {
+  color: #030405 !important;
+  background: linear-gradient(135deg, #f8fafc, #aeb7c5 54%, #4a515c) !important;
+  border-color: rgba(226, 232, 240, 0.22) !important;
+  font-weight: 900;
+}
+.ant-btn:hover {
+  transform: translateY(calc(-2px * var(--motion-scale)));
+}

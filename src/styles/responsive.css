@@ -1,0 +1,57 @@
+@media (max-width: 1260px) {
+  .hero-panel,
+  .planner-grid,
+  .settings-layout {
+    grid-template-columns: 1fr;
+  }
+  .focus-queue-card {
+    justify-self: stretch;
+    width: 100%;
+  }
+  .board-panel > .toolbar {
+    grid-template-columns: 1fr;
+  }
+  .toolbar-controls {
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 780px) {
+  :root {
+    --shell: calc(100% - 22px);
+  }
+  .app-header {
+    border-radius: 26px !important;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .top-menu {
+    width: 100%;
+  }
+  .hero-panel h1 {
+    font-size: 48px;
+  }
+  .analytics-grid,
+  .settings-grid-two,
+  .settings-switch-grid,
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .toolbar-controls {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .toolbar-select,
+  .toolbar-controls .ant-upload-wrapper,
+  .toolbar-controls .ant-btn,
+  .toolbar-controls .ant-segmented {
+    width: 100%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

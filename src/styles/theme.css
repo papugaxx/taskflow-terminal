@@ -1,0 +1,338 @@
+/* Chrome theme refinements */
+:root {
+  --chrome: #d8dde6;
+  --chrome-soft: #8f98a8;
+  --ink: #f8fafc;
+  --ink-strong: #ffffff;
+  --muted: #a8b0bd;
+  --muted-2: #6f7785;
+  --line: rgba(226, 232, 240, 0.13);
+  --line-strong: rgba(226, 232, 240, 0.24);
+}
+body::before {
+  background:
+    radial-gradient(
+      circle at 18% 12%,
+      rgba(216, 221, 230, 0.13),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 86% 4%,
+      rgba(255, 255, 255, 0.08),
+      transparent 22%
+    ),
+    radial-gradient(
+      circle at 70% 80%,
+      rgba(143, 152, 168, 0.1),
+      transparent 30%
+    ),
+    linear-gradient(135deg, #030405 0%, #06070a 42%, #030405 100%) !important;
+}
+.liquid-canvas {
+  background: conic-gradient(
+    from 20deg at 50% 50%,
+    transparent,
+    rgba(216, 221, 230, 0.09),
+    transparent 32%,
+    rgba(255, 255, 255, 0.06),
+    transparent 68%
+  ) !important;
+}
+.brand-mark,
+.focus-icon,
+.ant-btn-primary {
+  background: linear-gradient(135deg, #f8fafc, #aeb7c5 52%, #4a515c) !important;
+  color: #030405 !important;
+}
+.hero-panel h1 {
+  color: #ffffff !important;
+}
+.hero-panel {
+  min-height: 380px !important;
+}
+.focus-queue-card {
+  min-height: 230px !important;
+  height: 100% !important;
+  align-self: stretch !important;
+  justify-content: center !important;
+  background:
+    radial-gradient(
+      circle at 30% 0%,
+      rgba(216, 221, 230, 0.12),
+      transparent 44%
+    ),
+    rgba(226, 232, 240, 0.045) !important;
+  border-color: rgba(226, 232, 240, 0.15) !important;
+}
+.focus-row {
+  min-height: 62px !important;
+  border-color: rgba(226, 232, 240, 0.1) !important;
+}
+.focus-row:hover {
+  background: rgba(216, 221, 230, 0.08) !important;
+  border-color: rgba(216, 221, 230, 0.2) !important;
+}
+.board-panel .ant-segmented {
+  height: 42px !important;
+  padding: 4px !important;
+  border-radius: 18px !important;
+  background: rgba(0, 0, 0, 0.42) !important;
+  border: 1px solid rgba(226, 232, 240, 0.12) !important;
+  overflow: hidden !important;
+}
+.board-panel .ant-segmented-item {
+  height: 32px !important;
+  line-height: 32px !important;
+  border-radius: 14px !important;
+  overflow: hidden !important;
+}
+.board-panel .ant-segmented-item-label {
+  min-height: 32px !important;
+  line-height: 32px !important;
+  padding: 0 14px !important;
+  border-radius: 14px !important;
+}
+.board-panel .ant-segmented-thumb,
+.board-panel .ant-segmented-item-selected {
+  border-radius: 14px !important;
+  background: rgba(226, 232, 240, 0.16) !important;
+  box-shadow: none !important;
+}
+.board-panel .ant-segmented-item-selected .ant-segmented-item-label {
+  color: #ffffff !important;
+}
+.search-input.ant-input-affix-wrapper,
+.toolbar .search-input,
+.board-panel .ant-input-affix-wrapper {
+  border-color: rgba(226, 232, 240, 0.14) !important;
+  background: rgba(0, 0, 0, 0.34) !important;
+}
+.task-card {
+  background: linear-gradient(
+    160deg,
+    rgba(28, 31, 36, 0.82),
+    rgba(5, 6, 8, 0.9)
+  ) !important;
+}
+.task-card:hover {
+  border-color: rgba(216, 221, 230, 0.28) !important;
+}
+.task-card-sheen {
+  background: linear-gradient(
+    110deg,
+    transparent 18%,
+    rgba(216, 221, 230, 0.16) 44%,
+    transparent 64%
+  ) !important;
+}
+.premium-tag,
+.soft-tag {
+  border-color: rgba(216, 221, 230, 0.16) !important;
+  background: rgba(216, 221, 230, 0.08) !important;
+}
+.task-description {
+  color: #c8ced8 !important;
+}
+.workload-alert {
+  background: rgba(216, 221, 230, 0.08) !important;
+  border-color: rgba(216, 221, 230, 0.22) !important;
+}
+.settings-number .ant-input-number-group-addon,
+.product-switches .ant-form-item,
+.value-list div,
+.feature-stack > div {
+  border-color: rgba(226, 232, 240, 0.1) !important;
+  background: rgba(226, 232, 240, 0.045) !important;
+}
+@media (max-width: 1260px) {
+  .focus-queue-card {
+    min-height: 220px !important;
+  }
+}
+
+/* Neutral-black palette and component normalization */
+:root {
+  --bg: #030405;
+  --bg-soft: #06070a;
+  --ink: #f8fafc;
+  --ink-strong: #ffffff;
+  --muted: #a8b0bd;
+  --muted-2: #6f7785;
+  --chrome: #e2e8f0;
+  --chrome-soft: #94a3b8;
+  --line: rgba(226, 232, 240, 0.13);
+  --line-strong: rgba(226, 232, 240, 0.24);
+}
+html,
+body {
+  background: #030405 !important;
+}
+body::before {
+  background:
+    radial-gradient(
+      circle at 18% 12%,
+      rgba(148, 163, 184, 0.12),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 86% 4%,
+      rgba(226, 232, 240, 0.08),
+      transparent 22%
+    ),
+    radial-gradient(circle at 70% 80%, rgba(71, 85, 105, 0.1), transparent 30%),
+    linear-gradient(135deg, #030405 0%, #06070a 48%, #030405 100%) !important;
+}
+body::after {
+  background-image:
+    linear-gradient(rgba(226, 232, 240, 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(226, 232, 240, 0.02) 1px, transparent 1px) !important;
+}
+.liquid-canvas {
+  background: conic-gradient(
+    from 20deg at 50% 50%,
+    transparent,
+    rgba(148, 163, 184, 0.075),
+    transparent 32%,
+    rgba(226, 232, 240, 0.045),
+    transparent 68%
+  ) !important;
+}
+.ambient-one {
+  background: radial-gradient(
+    circle,
+    rgba(148, 163, 184, 0.12),
+    transparent 68%
+  ) !important;
+}
+.ambient-two {
+  background: radial-gradient(
+    circle,
+    rgba(226, 232, 240, 0.075),
+    transparent 70%
+  ) !important;
+}
+.liquid-panel,
+.custom-panel {
+  background: linear-gradient(
+    145deg,
+    rgba(13, 15, 19, 0.84),
+    rgba(4, 5, 7, 0.88)
+  ) !important;
+  border-color: rgba(226, 232, 240, 0.13) !important;
+  box-shadow:
+    0 28px 100px rgba(0, 0, 0, 0.58),
+    inset 0 1px 0 rgba(226, 232, 240, 0.06) !important;
+}
+.liquid-panel::before {
+  background: linear-gradient(
+    135deg,
+    rgba(226, 232, 240, 0.075),
+    transparent 34%,
+    transparent 72%,
+    rgba(148, 163, 184, 0.035)
+  ) !important;
+}
+.app-header {
+  background: rgba(3, 4, 5, 0.88) !important;
+  border-color: rgba(226, 232, 240, 0.14) !important;
+}
+.hero-panel {
+  background: linear-gradient(
+    145deg,
+    rgba(12, 14, 18, 0.86),
+    rgba(3, 4, 5, 0.92)
+  ) !important;
+}
+.focus-queue-card {
+  background:
+    radial-gradient(
+      circle at 30% 0%,
+      rgba(148, 163, 184, 0.11),
+      transparent 44%
+    ),
+    rgba(226, 232, 240, 0.035) !important;
+  border-color: rgba(226, 232, 240, 0.14) !important;
+}
+.stat-card,
+.task-card,
+.planner-card,
+.chart-card,
+.settings-card,
+.settings-value-card {
+  background: linear-gradient(
+    160deg,
+    rgba(15, 18, 23, 0.86),
+    rgba(4, 5, 7, 0.92)
+  ) !important;
+}
+.brand-mark,
+.focus-icon,
+.ant-btn-primary {
+  background: linear-gradient(135deg, #f8fafc, #aeb7c5 52%, #4b5563) !important;
+  color: #030405 !important;
+}
+/* Search: remove inner rectangular input surface and keep one clean pill only */
+.board-panel .search-input.ant-input-affix-wrapper,
+.board-panel .ant-input-affix-wrapper.search-input,
+.search-input.ant-input-affix-wrapper {
+  height: 48px !important;
+  border-radius: 999px !important;
+  background: rgba(0, 0, 0, 0.34) !important;
+  border: 1px solid rgba(226, 232, 240, 0.14) !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+}
+.board-panel .search-input .ant-input,
+.search-input .ant-input,
+.ant-input-affix-wrapper.search-input input,
+.board-panel .ant-input-affix-wrapper input {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  outline: none !important;
+  border-radius: 999px !important;
+}
+.board-panel .search-input .ant-input-prefix,
+.search-input .ant-input-prefix {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+.board-panel .search-input::before,
+.board-panel .search-input::after,
+.search-input::before,
+.search-input::after,
+.board-panel .ant-input-affix-wrapper::before,
+.board-panel .ant-input-affix-wrapper::after {
+  display: none !important;
+  content: none !important;
+  background: transparent !important;
+}
+/* Segmented stays clean inside its shell */
+.board-panel .ant-segmented {
+  background: rgba(0, 0, 0, 0.42) !important;
+  border-color: rgba(226, 232, 240, 0.13) !important;
+}
+.board-panel .ant-segmented-thumb,
+.board-panel .ant-segmented-item-selected {
+  background: rgba(226, 232, 240, 0.15) !important;
+}
+.premium-tag,
+.soft-tag,
+.product-switches .ant-form-item,
+.value-list div,
+.feature-stack > div {
+  background: rgba(226, 232, 240, 0.045) !important;
+  border-color: rgba(226, 232, 240, 0.1) !important;
+}
+.task-card:hover {
+  border-color: rgba(226, 232, 240, 0.28) !important;
+}
+.task-card-sheen {
+  background: linear-gradient(
+    110deg,
+    transparent 18%,
+    rgba(226, 232, 240, 0.14) 44%,
+    transparent 64%
+  ) !important;
+}

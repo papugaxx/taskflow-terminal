@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
-import { Button, DatePicker, Form, Input, InputNumber, Select } from 'antd';
-import dayjs from 'dayjs';
-import type { Task, TaskDraft, TaskEnergy, TaskPriority } from '../types/task';
+import { useEffect } from "react";
+import { Button, DatePicker, Form, Input, InputNumber, Select } from "antd";
+import dayjs from "dayjs";
+import type { Task, TaskDraft, TaskEnergy, TaskPriority } from "../types/task";
 
 type Props = {
   initialValues?: Task | null;
@@ -20,16 +20,16 @@ type TaskFormValues = {
 };
 
 const priorityOptions: Array<{ value: TaskPriority; label: string }> = [
-  { value: 'low', label: 'Low' },
-  { value: 'medium', label: 'Medium' },
-  { value: 'high', label: 'High' },
-  { value: 'urgent', label: 'Urgent' },
+  { value: "low", label: "Low" },
+  { value: "medium", label: "Medium" },
+  { value: "high", label: "High" },
+  { value: "urgent", label: "Urgent" },
 ];
 
 const energyOptions: Array<{ value: TaskEnergy; label: string }> = [
-  { value: 'low', label: 'Low energy' },
-  { value: 'medium', label: 'Normal focus' },
-  { value: 'deep', label: 'Deep work' },
+  { value: "low", label: "Low energy" },
+  { value: "medium", label: "Normal focus" },
+  { value: "deep", label: "Deep work" },
 ];
 
 export const TaskForm = ({ onSave, initialValues }: Props) => {
@@ -39,39 +39,62 @@ export const TaskForm = ({ onSave, initialValues }: Props) => {
     if (initialValues) {
       form.setFieldsValue({
         ...initialValues,
-        dueDate: initialValues.dueDate ? dayjs(initialValues.dueDate) : undefined,
+        dueDate: initialValues.dueDate
+          ? dayjs(initialValues.dueDate)
+          : undefined,
       });
     } else {
       form.resetFields();
-      form.setFieldsValue({ priority: 'medium', tags: [], estimateMinutes: 60, energy: 'medium' });
+      form.setFieldsValue({
+        priority: "medium",
+        tags: [],
+        estimateMinutes: 60,
+        energy: "medium",
+      });
     }
   }, [initialValues, form]);
 
   const handleFinish = (values: TaskFormValues) => {
     onSave({
       title: values.title.trim(),
-      description: values.description?.trim() || '',
+      description: values.description?.trim() || "",
       tags: values.tags || [],
-      priority: values.priority || 'medium',
+      priority: values.priority || "medium",
       dueDate: values.dueDate?.toISOString?.(),
       project: values.project?.trim() || undefined,
       estimateMinutes: Number(values.estimateMinutes ?? 60),
-      energy: values.energy || 'medium',
+      energy: values.energy || "medium",
       background: {
-        color: '#101010',
+        color: "#101010",
         opacity: 0.12,
       },
     });
   };
 
   return (
-    <Form form={form} onFinish={handleFinish} layout="vertical" className="task-form">
-      <Form.Item name="title" label="Task title" rules={[{ required: true, message: 'Please enter a task title' }]}>
-        <Input placeholder="e.g. Launch landing page" maxLength={80} showCount />
+    <Form
+      form={form}
+      onFinish={handleFinish}
+      layout="vertical"
+      className="task-form"
+    >
+      <Form.Item
+        name="title"
+        label="Task title"
+        rules={[{ required: true, message: "Please enter a task title" }]}
+      >
+        <Input
+          placeholder="e.g. Launch landing page"
+          maxLength={80}
+          showCount
+        />
       </Form.Item>
 
       <Form.Item name="description" label="Description">
-        <Input.TextArea rows={4} placeholder="Add context, acceptance criteria or next steps..." />
+        <Input.TextArea
+          rows={4}
+          placeholder="Add context, acceptance criteria or next steps..."
+        />
       </Form.Item>
 
       <div className="form-grid">
@@ -88,7 +111,13 @@ export const TaskForm = ({ onSave, initialValues }: Props) => {
           <DatePicker className="full-width" />
         </Form.Item>
         <Form.Item name="estimateMinutes" label="Estimate">
-          <InputNumber min={15} max={480} step={15} addonAfter="min" className="full-width" />
+          <InputNumber
+            min={15}
+            max={480}
+            step={15}
+            addonAfter="min"
+            className="full-width"
+          />
         </Form.Item>
       </div>
 
@@ -97,7 +126,11 @@ export const TaskForm = ({ onSave, initialValues }: Props) => {
           <Select options={energyOptions} />
         </Form.Item>
         <Form.Item name="tags" label="Tags">
-          <Select mode="tags" placeholder="frontend, docs, bug..." tokenSeparators={[',']} />
+          <Select
+            mode="tags"
+            placeholder="frontend, docs, bug..."
+            tokenSeparators={[","]}
+          />
         </Form.Item>
       </div>
 

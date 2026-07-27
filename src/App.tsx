@@ -1,24 +1,33 @@
-import { useEffect, useMemo, useState } from 'react';
-import { ConfigProvider, Layout, Menu, theme } from 'antd';
-import { AppstoreOutlined, BarChartOutlined, SettingOutlined } from '@ant-design/icons';
-import { Dashboard } from './pages/Dashboard';
-import { Settings } from './pages/Settings';
-import { loadSettings, saveSettings } from './utils/storage';
-import type { UserSettings } from './types/task';
+import { useEffect, useMemo, useState } from "react";
+import { ConfigProvider, Layout, Menu, theme } from "antd";
+import {
+  AppstoreOutlined,
+  BarChartOutlined,
+  SettingOutlined,
+} from "@ant-design/icons";
+import { Dashboard } from "./pages/Dashboard";
+import { Settings } from "./pages/Settings";
+import { loadSettings, saveSettings } from "./utils/storage";
+import type { UserSettings } from "./types/task";
 
 const { Header, Content } = Layout;
-type PageKey = 'dashboard' | 'analytics' | 'settings';
+type PageKey = "dashboard" | "analytics" | "settings";
 
 export default function App() {
-  const [currentPage, setCurrentPage] = useState<PageKey>('dashboard');
+  const [currentPage, setCurrentPage] = useState<PageKey>("dashboard");
   const [settings, setSettings] = useState<UserSettings>(() => loadSettings());
 
   useEffect(() => {
     const root = document.documentElement;
-    const glassAlpha = Math.min(0.9, Math.max(0.48, settings.glassIntensity / 100));
-    const motion = settings.reduceMotion ? 0 : Math.min(1, Math.max(0, settings.motionIntensity / 100));
-    root.style.setProperty('--glass-alpha', String(glassAlpha));
-    root.style.setProperty('--motion-scale', String(motion));
+    const glassAlpha = Math.min(
+      0.9,
+      Math.max(0.48, settings.glassIntensity / 100),
+    );
+    const motion = settings.reduceMotion
+      ? 0
+      : Math.min(1, Math.max(0, settings.motionIntensity / 100));
+    root.style.setProperty("--glass-alpha", String(glassAlpha));
+    root.style.setProperty("--motion-scale", String(motion));
     root.dataset.silver = String(settings.silverMode);
   }, [settings]);
 
@@ -26,12 +35,12 @@ export default function App() {
     () => ({
       algorithm: theme.darkAlgorithm,
       token: {
-        colorPrimary: '#f5f5f0',
-        colorBgBase: '#030303',
-        colorTextBase: '#f6f6f3',
-        colorBorder: 'rgba(255,255,255,.16)',
+        colorPrimary: "#f5f5f0",
+        colorBgBase: "#030303",
+        colorTextBase: "#f6f6f3",
+        colorBorder: "rgba(255,255,255,.16)",
         borderRadius: 24,
-        fontFamily: 'Inter, system-ui, sans-serif',
+        fontFamily: "Inter, system-ui, sans-serif",
       },
       components: {
         Button: { borderRadius: 999, controlHeight: 44 },
@@ -73,18 +82,26 @@ export default function App() {
             onClick={(event) => setCurrentPage(event.key as PageKey)}
             className="top-menu"
             items={[
-              { key: 'dashboard', icon: <AppstoreOutlined />, label: 'Board' },
-              { key: 'analytics', icon: <BarChartOutlined />, label: 'Insights' },
-              { key: 'settings', icon: <SettingOutlined />, label: 'Studio' },
+              { key: "dashboard", icon: <AppstoreOutlined />, label: "Board" },
+              {
+                key: "analytics",
+                icon: <BarChartOutlined />,
+                label: "Insights",
+              },
+              { key: "settings", icon: <SettingOutlined />, label: "Studio" },
             ]}
           />
         </Header>
 
         <Content className="app-content">
-          {currentPage === 'settings' ? (
+          {currentPage === "settings" ? (
             <Settings settings={settings} onSave={handleSaveSettings} />
           ) : (
-            <Dashboard key={currentPage} settings={settings} defaultTab={currentPage === 'analytics' ? 'analytics' : 'active'} />
+            <Dashboard
+              key={currentPage}
+              settings={settings}
+              defaultTab={currentPage === "analytics" ? "analytics" : "active"}
+            />
           )}
         </Content>
       </Layout>

@@ -1,0 +1,182 @@
+:root {
+  --bg: #050505;
+  --bg-soft: #06070a;
+  --ink: #f8fafc;
+  --ink-strong: #ffffff;
+  --muted: #a8b0bd;
+  --muted-2: #6f7785;
+  --line: rgba(226, 232, 240, 0.12);
+  --line-strong: rgba(226, 232, 240, 0.22);
+  --panel: rgba(14, 16, 20, 0.78);
+  --panel-soft: rgba(226, 232, 240, 0.055);
+  --chrome: #d8dde6;
+  --chrome-soft: #8f98a8;
+  --danger: #f4b860;
+  --radius: 28px;
+  --shell: min(1640px, calc(100% - 48px));
+  --glass-alpha: 0.72;
+  --motion-scale: 0.42;
+  color-scheme: dark;
+  font-synthesis: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+html {
+  min-height: 100%;
+  background: var(--bg);
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background: #050505;
+  font-family:
+    Inter,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      circle at 18% 12%,
+      rgba(216, 221, 230, 0.16),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 86% 4%,
+      rgba(255, 255, 255, 0.08),
+      transparent 22%
+    ),
+    radial-gradient(
+      circle at 70% 80%,
+      rgba(143, 152, 168, 0.1),
+      transparent 30%
+    ),
+    linear-gradient(135deg, #050505 0%, #06070a 42%, #050505 100%);
+  animation: bg-drift calc(18s / max(var(--motion-scale), 0.25)) ease-in-out
+    infinite alternate;
+}
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.28;
+  background-image:
+    linear-gradient(rgba(226, 232, 240, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(226, 232, 240, 0.026) 1px, transparent 1px);
+  background-size: 96px 96px;
+  mask-image: linear-gradient(to bottom, black, transparent 90%);
+}
+@keyframes bg-drift {
+  from {
+    transform: scale(1);
+    filter: brightness(0.92);
+  }
+  to {
+    transform: scale(1.035);
+    filter: brightness(1.08);
+  }
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+.mono {
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+.muted {
+  color: var(--muted) !important;
+}
+.full-width {
+  width: 100%;
+}
+
+.app-shell {
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+  background: transparent !important;
+}
+.liquid-canvas {
+  position: fixed;
+  inset: -20%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background: conic-gradient(
+    from 20deg at 50% 50%,
+    transparent,
+    rgba(216, 221, 230, 0.09),
+    transparent 32%,
+    rgba(255, 255, 255, 0.06),
+    transparent 68%
+  );
+  filter: blur(74px);
+  animation: slow-spin calc(42s / max(var(--motion-scale), 0.2)) linear infinite;
+}
+.ambient {
+  pointer-events: none;
+  position: fixed;
+  z-index: 0;
+  border-radius: 999px;
+  filter: blur(18px);
+  opacity: 0.45;
+}
+.ambient-one {
+  width: 460px;
+  height: 460px;
+  left: -140px;
+  top: 18%;
+  background: radial-gradient(
+    circle,
+    rgba(216, 221, 230, 0.14),
+    transparent 68%
+  );
+  animation: orb-a calc(16s / max(var(--motion-scale), 0.25)) ease-in-out
+    infinite;
+}
+.ambient-two {
+  width: 420px;
+  height: 420px;
+  right: -120px;
+  bottom: 10%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1),
+    transparent 70%
+  );
+  animation: orb-b calc(20s / max(var(--motion-scale), 0.25)) ease-in-out
+    infinite;
+}
+@keyframes slow-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes orb-a {
+  50% {
+    transform: translate3d(90px, -40px, 0);
+  }
+}
+@keyframes orb-b {
+  50% {
+    transform: translate3d(-80px, 40px, 0);
+  }
+}
